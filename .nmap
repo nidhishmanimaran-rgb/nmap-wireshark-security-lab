@@ -1,0 +1,307 @@
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-05-31 19:16 +0530
+NSE: Loaded 158 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 19:16
+Completed NSE at 19:16, 0.00s elapsed
+Initiating NSE at 19:16
+Completed NSE at 19:16, 0.00s elapsed
+Initiating NSE at 19:16
+Completed NSE at 19:16, 0.00s elapsed
+Initiating Parallel DNS resolution of 1 host. at 19:16
+Completed Parallel DNS resolution of 1 host. at 19:16, 3.56s elapsed
+Initiating System DNS resolution of 1 host. at 19:16
+Completed System DNS resolution of 1 host. at 19:16, 2.77s elapsed
+Failed to resolve "nmap".
+Initiating ARP Ping Scan at 19:16
+Scanning 192.168.1.1 [1 port]
+Completed ARP Ping Scan at 19:16, 0.05s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 19:16
+Completed Parallel DNS resolution of 1 host. at 19:16, 0.02s elapsed
+Initiating SYN Stealth Scan at 19:16
+Scanning 192.168.1.1 (192.168.1.1) [1000 ports]
+Discovered open port 53/tcp on 192.168.1.1
+Discovered open port 443/tcp on 192.168.1.1
+Discovered open port 80/tcp on 192.168.1.1
+Discovered open port 52869/tcp on 192.168.1.1
+Completed SYN Stealth Scan at 19:16, 1.32s elapsed (1000 total ports)
+Initiating Service scan at 19:16
+Scanning 4 services on 192.168.1.1 (192.168.1.1)
+Completed Service scan at 19:16, 15.53s elapsed (4 services on 1 host)
+Initiating OS detection (try #1) against 192.168.1.1 (192.168.1.1)
+NSE: Script scanning 192.168.1.1.
+Initiating NSE at 19:16
+Completed NSE at 19:16, 8.34s elapsed
+Initiating NSE at 19:16
+Completed NSE at 19:16, 1.48s elapsed
+Initiating NSE at 19:16
+Completed NSE at 19:16, 0.01s elapsed
+Nmap scan report for 192.168.1.1 (192.168.1.1)
+Host is up (0.0054s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT      STATE    SERVICE   VERSION
+23/tcp    filtered telnet
+53/tcp    open     domain    Plesk Onyx BIND
+80/tcp    open     http
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Cache-Control: no-cache,no-store
+|     Pragma: no-cache
+|     Content-Length: 156572
+|     Set-Cookie: SID=2871e83a596dc738527084f50191a36be94b6b3e8108b5360872fd8751aa6dab; PATH=/; HttpOnly; SameSite=strict
+|     Set-Cookie: _TESTCOOKIESUPPORT=1; PATH=/; HttpOnly; SameSite=strict
+|     Server: 
+|     Accept-Ranges: bytes
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Content-Security-Policy: frame-ancestors 'self' 
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Type: text/html; charset=utf-8
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+|     <link rel="shortcut icon" href="/img/favicon.ico" />
+|     <title>&#70;&#54;&#55;&#48;&#76;&#86;&#57;&
+|   HTTPOptions: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Security-Policy: frame-ancestors 'self'; 
+|     Cache-Control: no-cache,no-store
+|     Pragma: no-cache
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="#FFFFFF" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h2>400 Bad Request</h2>
+|     Your request has bad syntax or is inherently impossible to satisfy.
+|     <div style="display:none">
+|     <ajax_response_xml_root>
+|     <IF_ERRORSTR>SessionTimeout</IF_ERRORSTR>
+|     <IF_ERRORPARAM>SUCC</IF_ERRORPARAM>
+|     <IF_ERRORTYPE>SUCC</IF_ERRORTYPE>
+|_    </ajax_response_xml_roo
+|_http-server-header: <empty>
+| http-methods: 
+|_  Supported Methods: GET POST
+|_http-favicon: Unknown favicon MD5: 5E966BB5036DC2624A0187A91E59D3DD
+|_http-title: &#70;&#54;&#55;&#48;&#76;&#86;&#57;&#46;&#48;
+443/tcp   open     ssl/https
+| ssl-cert: Subject: organizationName=ZTE/stateOrProvinceName=JiangSu/countryName=CN
+| Issuer: organizationName=ZTE/stateOrProvinceName=JiangSu/countryName=CN
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2024-11-01T11:13:27
+| Not valid after:  2044-10-27T11:13:27
+| MD5:     a245 74df 16b3 812c 0b7c c740 989d da3a
+| SHA-1:   9057 82b5 3c90 3886 839c ce0c e7ab 8a86 cd67 d6d9
+|_SHA-256: 714f e5e9 4ce1 d0d9 e95c fbf8 2104 2cd9 6d82 63b2 9ed7 bdbc 2c90 7cd3 0d74 ea7a
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: <empty>
+|_http-title: &#70;&#54;&#55;&#48;&#76;&#86;&#57;&#46;&#48;
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.0 404 Not Found
+|     Connection: close
+|     Content-Type: text/html; charset=iso-8859-1
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Security-Policy: frame-ancestors 'self'; 
+|     Cache-Control: no-cache,no-store
+|     Pragma: no-cache
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body bgcolor="#FFFFFF" text="#000000" link="#2020ff" vlink="#4040cc">
+|     <h2>404 Not Found</h2>
+|     <span>The requested URL was not found on this server.</span>
+|     <div style="display:none">
+|     <ajax_response_xml_root>
+|     <IF_ERRORSTR>SessionTimeout</IF_ERRORSTR>
+|     <IF_ERRORPARAM>SUCC</IF_ERRORPARA
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Connection: close
+|     Cache-Control: no-cache,no-store
+|     Pragma: no-cache
+|     Content-Length: 156572
+|     Set-Cookie: SID_HTTPS_=3523133acd43e3c4e49aaf72a20ff60bebae16b931abf1c84b7acb442482cb4c; PATH=/; Secure; HttpOnly; SameSite=strict
+|     Set-Cookie: _TESTCOOKIESUPPORT_HTTPS_=1; PATH=/; Secure; HttpOnly; SameSite=strict
+|     Server: 
+|     Accept-Ranges: bytes
+|     X-Content-Type-Options: nosniff
+|     X-XSS-Protection: 1; mode=block
+|     Content-Security-Policy: frame-ancestors 'self' 
+|     X-Frame-Options: SAMEORIGIN
+|     Content-Type: text/html; charset=utf-8
+|     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml">
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+|_    <meta http-equiv="X-UA-Compatible" content="IE=ed
+| http-methods: 
+|_  Supported Methods: GET POST
+52869/tcp open     unknown
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, Help, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/0.0 400 Bad Request
+|     SERVER: Linux, UPnP/1.0, Portable SDK for UPnP devices/2.0
+|     CONTENT-LENGTH: 50
+|     CONTENT-TYPE: text/html
+|     <html><body><h1>400 Bad Request</h1></body></html>
+|   HTTPOptions: 
+|     HTTP/0.0 501 Not Implemented
+|     SERVER: Linux, UPnP/1.0, Portable SDK for UPnP devices/2.0
+|     CONTENT-LENGTH: 54
+|     CONTENT-TYPE: text/html
+|_    <html><body><h1>501 Not Implemented</h1></body></html>
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=5/31%Time=6A1C3BBF%P=i686-pc-windows-windows%r(
+SF:GetRequest,15835,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\r\nCac
+SF:he-Control:\x20no-cache,no-store\r\nPragma:\x20no-cache\r\nContent-Leng
+SF:th:\x20156572\r\nSet-Cookie:\x20SID=2871e83a596dc738527084f50191a36be94
+SF:b6b3e8108b5360872fd8751aa6dab;\x20PATH=/;\x20HttpOnly;\x20SameSite=stri
+SF:ct\r\nSet-Cookie:\x20_TESTCOOKIESUPPORT=1;\x20PATH=/;\x20HttpOnly;\x20S
+SF:ameSite=strict\r\nServer:\x20\r\nAccept-Ranges:\x20bytes\r\nX-Content-T
+SF:ype-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nCon
+SF:tent-Security-Policy:\x20frame-ancestors\x20'self'\x20\r\nX-Frame-Optio
+SF:ns:\x20SAMEORIGIN\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\n\r
+SF:\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01\x20Tran
+SF:sitional//EN\"\x20\"http://www\.w3\.org/TR/html4/transitional\.dtd\">\n
+SF:<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\">\n<head>\n<meta\x20ht
+SF:tp-equiv=\"Content-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x2
+SF:0/>\n<meta\x20http-equiv=\"X-UA-Compatible\"\x20content=\"IE=edge\">\n\
+SF:n<link\x20rel=\"shortcut\x20icon\"\x20href=\"/img/favicon\.ico\"\x20/>\
+SF:n\n<title>&#70;&#54;&#55;&#48;&#76;&#86;&#57;&")%r(HTTPOptions,5C7,"HTT
+SF:P/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nContent-Type
+SF::\x20text/html;\x20charset=iso-8859-1\r\nX-Content-Type-Options:\x20nos
+SF:niff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Frame-Options:\x20SA
+SF:MEORIGIN\r\nContent-Security-Policy:\x20frame-ancestors\x20'self';\x20\
+SF:r\nCache-Control:\x20no-cache,no-store\r\nPragma:\x20no-cache\r\n\r\n\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<html>\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<hea
+SF:d><title>400\x20Bad\x20Request</title></head>\n\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<body\x20bgcolor=\"#FFFFFF\"\
+SF:x20text=\"#000000\"\x20link=\"#2020ff\"\x20vlink=\"#4040cc\">\n\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2>400\x20Ba
+SF:d\x20Request</h2>\nYour\x20request\x20has\x20bad\x20syntax\x20or\x20is\
+SF:x20inherently\x20impossible\x20to\x20satisfy\.\n<div\x20style=\"display
+SF::none\">\n<ajax_response_xml_root>\n<IF_ERRORSTR>SessionTimeout</IF_ERR
+SF:ORSTR>\n<IF_ERRORPARAM>SUCC</IF_ERRORPARAM>\n<IF_ERRORTYPE>SUCC</IF_ERR
+SF:ORTYPE>\n</ajax_response_xml_roo");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.99%T=SSL%I=7%D=5/31%Time=6A1C3BC2%P=i686-pc-windows-win
+SF:dows%r(GetRequest,826C,"HTTP/1\.0\x20200\x20OK\r\nConnection:\x20close\
+SF:r\nCache-Control:\x20no-cache,no-store\r\nPragma:\x20no-cache\r\nConten
+SF:t-Length:\x20156572\r\nSet-Cookie:\x20SID_HTTPS_=3523133acd43e3c4e49aaf
+SF:72a20ff60bebae16b931abf1c84b7acb442482cb4c;\x20PATH=/;\x20Secure;\x20Ht
+SF:tpOnly;\x20SameSite=strict\r\nSet-Cookie:\x20_TESTCOOKIESUPPORT_HTTPS_=
+SF:1;\x20PATH=/;\x20Secure;\x20HttpOnly;\x20SameSite=strict\r\nServer:\x20
+SF:\r\nAccept-Ranges:\x20bytes\r\nX-Content-Type-Options:\x20nosniff\r\nX-
+SF:XSS-Protection:\x201;\x20mode=block\r\nContent-Security-Policy:\x20fram
+SF:e-ancestors\x20'self'\x20\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-
+SF:Type:\x20text/html;\x20charset=utf-8\r\nStrict-Transport-Security:\x20m
+SF:ax-age=31536000;\x20includeSubDomains;\x20preload\r\n\r\n<!DOCTYPE\x20H
+SF:TML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01\x20Transitional//EN\"\x
+SF:20\"http://www\.w3\.org/TR/html4/transitional\.dtd\">\n<html\x20xmlns=\
+SF:"http://www\.w3\.org/1999/xhtml\">\n<head>\n<meta\x20http-equiv=\"Conte
+SF:nt-Type\"\x20content=\"text/html;\x20charset=utf-8\"\x20/>\n<meta\x20ht
+SF:tp-equiv=\"X-UA-Compatible\"\x20content=\"IE=ed")%r(FourOhFourRequest,6
+SF:03,"HTTP/1\.0\x20404\x20Not\x20Found\r\nConnection:\x20close\r\nContent
+SF:-Type:\x20text/html;\x20charset=iso-8859-1\r\nX-Content-Type-Options:\x
+SF:20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Frame-Options:\
+SF:x20SAMEORIGIN\r\nContent-Security-Policy:\x20frame-ancestors\x20'self';
+SF:\x20\r\nCache-Control:\x20no-cache,no-store\r\nPragma:\x20no-cache\r\nS
+SF:trict-Transport-Security:\x20max-age=31536000;\x20includeSubDomains;\x2
+SF:0preload\r\n\r\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20<html>\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20<head><title>404\x20Not\x20Found</title></head>\n\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<body\x20bgco
+SF:lor=\"#FFFFFF\"\x20text=\"#000000\"\x20link=\"#2020ff\"\x20vlink=\"#404
+SF:0cc\">\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20<h2>404\x20Not\x20Found</h2>\n<span>The\x20requested\x20URL\x20was\x
+SF:20not\x20found\x20on\x20this\x20server\.</span>\n<div\x20style=\"displa
+SF:y:none\">\n<ajax_response_xml_root>\n<IF_ERRORSTR>SessionTimeout</IF_ER
+SF:RORSTR>\n<IF_ERRORPARAM>SUCC</IF_ERRORPARA");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port52869-TCP:V=7.99%I=7%D=5/31%Time=6A1C3BC3%P=i686-pc-windows-windows
+SF:%r(HTTPOptions,BF,"HTTP/0\.0\x20501\x20Not\x20Implemented\r\nSERVER:\x2
+SF:0Linux,\x20UPnP/1\.0,\x20Portable\x20SDK\x20for\x20UPnP\x20devices/2\.0
+SF:\r\nCONTENT-LENGTH:\x2054\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<html><b
+SF:ody><h1>501\x20Not\x20Implemented</h1></body></html>")%r(RTSPRequest,B7
+SF:,"HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Linux,\x20UPnP/1\.0,
+SF:\x20Portable\x20SDK\x20for\x20UPnP\x20devices/2\.0\r\nCONTENT-LENGTH:\x
+SF:2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x2
+SF:0Request</h1></body></html>")%r(RPCCheck,B7,"HTTP/0\.0\x20400\x20Bad\x2
+SF:0Request\r\nSERVER:\x20Linux,\x20UPnP/1\.0,\x20Portable\x20SDK\x20for\x
+SF:20UPnP\x20devices/2\.0\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20tex
+SF:t/html\r\n\r\n<html><body><h1>400\x20Bad\x20Request</h1></body></html>"
+SF:)%r(DNSVersionBindReqTCP,B7,"HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERV
+SF:ER:\x20Linux,\x20UPnP/1\.0,\x20Portable\x20SDK\x20for\x20UPnP\x20device
+SF:s/2\.0\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<h
+SF:tml><body><h1>400\x20Bad\x20Request</h1></body></html>")%r(DNSStatusReq
+SF:uestTCP,B7,"HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Linux,\x20
+SF:UPnP/1\.0,\x20Portable\x20SDK\x20for\x20UPnP\x20devices/2\.0\r\nCONTENT
+SF:-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<html><body><h1>400
+SF:\x20Bad\x20Request</h1></body></html>")%r(Help,B7,"HTTP/0\.0\x20400\x20
+SF:Bad\x20Request\r\nSERVER:\x20Linux,\x20UPnP/1\.0,\x20Portable\x20SDK\x2
+SF:0for\x20UPnP\x20devices/2\.0\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\
+SF:x20text/html\r\n\r\n<html><body><h1>400\x20Bad\x20Request</h1></body></
+SF:html>")%r(SSLSessionReq,B7,"HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVE
+SF:R:\x20Linux,\x20UPnP/1\.0,\x20Portable\x20SDK\x20for\x20UPnP\x20devices
+SF:/2\.0\r\nCONTENT-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<ht
+SF:ml><body><h1>400\x20Bad\x20Request</h1></body></html>")%r(TerminalServe
+SF:rCookie,B7,"HTTP/0\.0\x20400\x20Bad\x20Request\r\nSERVER:\x20Linux,\x20
+SF:UPnP/1\.0,\x20Portable\x20SDK\x20for\x20UPnP\x20devices/2\.0\r\nCONTENT
+SF:-LENGTH:\x2050\r\nCONTENT-TYPE:\x20text/html\r\n\r\n<html><body><h1>400
+SF:\x20Bad\x20Request</h1></body></html>");
+MAC Address: A4:F3:3B:8D:0F:0B (zte)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.14
+Uptime guess: 1.471 days (since Sat May 30 07:59:07 2026)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   5.35 ms 192.168.1.1 (192.168.1.1)
+
+NSE: Script Post-scanning.
+Initiating NSE at 19:16
+Completed NSE at 19:16, 0.00s elapsed
+Initiating NSE at 19:16
+Completed NSE at 19:16, 0.00s elapsed
+Initiating NSE at 19:16
+Completed NSE at 19:16, 0.00s elapsed
+Read data files from: C:\Program Files (x86)\Nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 39.15 seconds
+           Raw packets sent: 1024 (45.850KB) | Rcvd: 1022 (41.670KB)
